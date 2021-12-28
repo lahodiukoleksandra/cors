@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> To do List</title>
+</head>
+<body>
+<h1> To do list: </h1>
+<form action="/addTodoItem/" method = "post">{% csrf_token %}
+    <input type="text" name="text">
+    <input type="submit" value="Add Todo Item">
+</form>
+    <ul>
+{% for list in all_list %}
+    <li>{{ list.text}}
+</li>
+{% endfor%}
+</ul>
+</body>
+</html>
