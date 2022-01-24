@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  </head>
+<body>
+  <style>
+              #textarea {
+  text-align: center;
+}
+body {
+    background-color: #75889c;
+}
+.dropbtn {
+  background-color:#B0C4DE;
+  color: white;
+  padding: 25px;
+  font-size: 25px;
+  border: none;
+}
+.menu{
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #849dbd;
+  text-align: center;
+  background-color: #B0C4DE ;
+  width: 950px;
+  height: 90px;
+  margin-left: 235px;
+  margin-right: 500px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #B0C4DE;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #B0C4DE;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #B0C4DE;}
+#header
+.caption {
+  text-align:center;
+}
+#prev {
+  text-align:center;
+}
+#next {
+  text-align:center;
+}
+div.menu li a:hover {
+  background-color: #b591c4;
+  color: blue;
+}
+.border {
+    background-color: whitesmoke    ;
+  border-color: #5e748c;
+  border-style: solid;
+  margin-top: 50px;
+  height: 600px;
+  width: 1000px;
+}
+.content a:hover {
+  background-color:#B0C4DE
+}
+.dropdown:hover .dropdowncontent {
+  display: block;
+}
+button {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #849dbd;
+  background-color: #B0C4DE;
+  width: 150px;
+  height: 40px;
+}
+div.dropdowncontent {
+  display: none;
+  background-color: #b591c4;
+  width: 615px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+div.dropdowncontent a {
+  color: red;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  position: static;
+}
+.arrow {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+.text {
+    width: 50px;
+    height: 300px;
+}
+  </style>
+<center>
+  <div class="menu">
+      <div class="dropdown">
+        <button onclick="showInfo()" class="dropbtn"> Home</button>
+        <div class="dropdown-content">
+         <button onclick="showInfo()">Home page</button>
+       </div>
+    </div>
+    <div class="dropdown">
+    <button class="dropbtn">Practice</button>
+      <div class="dropdown-content">
+        <button class="mySlides fade" id="week1" color="#7b38d8" onclick="showPic()">Week 1</button>
+        <button id="week2" color="#7b38d8" onclick="notAllowed()">Week 2</button>
+        <button id="week3" color="#7b38d8" onclick="notAllowed()">Week 3</button>
+        <button id="week4" color="#7b38d8" onclick="notAllowed()">Week 4</button>
+      </div>
+    </div>
+    <div class="dropdown">
+       <button class="dropbtn">Culture</button>
+      <div class="dropdown-content">
+      <button onclick="showCity1()">Dresden</button>
+      <button onclick="showCity2()">Schkeuditz</button>
+      <button onclick="showCity3()">Leipzig</button>
+    </div>
+  </div>
+    <button class="dropbtn">Free Time</button>
+    <div class="dropdown"></div>
+</center>
+<center>
+
+    <div class="border">
+        <!-- <div class="mySlides1">
+            <img id="MyQ" style= "visibility: hidden; text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoL1.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Dresden is the capital city of the German state of Saxony and its second most populous city, after Leipzig.</p>
+        </div>
+        <div class="mySlides">
+            <img id="MyQ" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoL2.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">It is the 12th most populous city of Germany, the fourth largest by area (after Berlin, Hamburg and Cologne), and the third most populous city in the area of former East Germany, after Berlin and Leipzig.</p>
+        </div>
+        <div class="mySlides">
+            <img id="MyQ" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoL3.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Dresden has a long history as the capital and royal residence for the Electors and Kings of Saxony, who for centuries furnished the city with cultural and artistic splendor, and was once by personal union the family seat of Polish monarchs.</p>
+        </div>
+        <div class="mySlides">
+            <img id="MyQ" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoL4.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Since German reunification in 1990, Dresden has again become a cultural, educational and political centre of Germany.</p>
+        </div>
+        <div class="mySlides">
+            <img id="MyQ" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoLiepzig.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Dresden is one of the most visited cities in Germany with 4.7 million overnight stays per year.[7][8] Its most prominent building is the Frauenkirche located at the Neumarkt.</p>
+        </div> -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img id="Myq" style= "visibility: hidden; text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoDrezden.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Dresden is the capital city of the German state of Saxony and its second most populous city, after Leipzig.</p>
+        </div>
+        <div class="mySlides">
+            <img id="Myq" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoDresden1.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">It is the 12th most populous city of Germany, the fourth largest by area (after Berlin, Hamburg and Cologne), and the third most populous city in the area of former East Germany, after Berlin and Leipzig.</p>
+        </div>
+        <div class="mySlides">
+            <img id="Myq" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoDresden2.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Dresden has a long history as the capital and royal residence for the Electors and Kings of Saxony, who for centuries furnished the city with cultural and artistic splendor, and was once by personal union the family seat of Polish monarchs.</p>
+        </div>
+        <div class="mySlides">
+            <img id="Myq" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoDresden3.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Since German reunification in 1990, Dresden has again become a cultural, educational and political centre of Germany.</p>
+        </div>
+        <div class="mySlides">
+            <img id="Myq" style= "text-align: center; width: 500px; height: 500px;"src="/Users/aleksandra/Downloads/photoDresden4.jpeg">
+            <p style="text-align: center; width: 500px; height: 500px;">Dresden is one of the most visited cities in Germany with 4.7 million overnight stays per year.[7][8] Its most prominent building is the Frauenkirche located at the Neumarkt.</p>
+        </div>
+    </div>
+      <div style="display: block;"id="pic"></div>
+      <div style="width:800px; height:200px;" id="text"></div>
+
+    <!--Liepzig -->
+  <div style="width:800px; height:200px;" id="text"></div>
+  <div style="width:800px; height:200px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" id="text"></div>
+</div>
+</center>
+
+</center>
+<center>
+<a id="arrow" onclick="plusSlides(-1)"><</a>
+<a id="arrow" onclick="plusSlides(1)">></a>
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</center>
+<script>
+    function showInfo() {
+        const info = document.getElementById('text').innerText = "Regional Center for Vocational Education in Nisko. In our school there are such areas of study as: mechanic, electrician, graphic artist, programmer, economist, administrator and others. Also our school takes part in project ERASMUS, which allows students to have practice abroad, in countries like Germany or Ireland"
+        const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/aleksandra/Downloads/logoRZEZ.png\" text-align=\'center\' width=\'500px\' height=\'500px\'>';
+
+    }
+function showCity1() {
+            const q = document.getElementById('Myq')
+            q.style.visibility = "visible";
+        }
+
+  function showCity2() {
+    const q = document.getElementById('MyQ')
+            q.style.visibility = "visible";
+        }
+function showCity3() {
+  const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoLiepzig.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>'; //Show city2
+  // const text = document.getElementById('text').innerText = "Leipzig is the most populous city in the German state of Saxony. With a population of 605,407 inhabitants as of million residents in the larger urban zone, it surpasses the Saxon capital of Dresden, and is Germany's eighth most populous city as well as the second most populous city in the area of former East Germany after (East) Berlin. "
+
+} 
+function showPic() {
+  // const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/a21/Downloads/photo5427104148647688057.jpg\" text-align=\'center\' width=\'400px\' height=\'500px\'>'; //Show city3
+  // const text = document.getElementById('text').innerText = "The first week at Germany"
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} // function for photos from dresden
+
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides1");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+//     for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//     }
+//     for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//     }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
+</script>
+</body>
+</html>
