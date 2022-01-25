@@ -1,6 +1,14 @@
 #textarea {
     text-align: center;
   }
+  .border {
+      text-align: center;
+      margin-left: 200px;
+  }
+  p {
+    text-align: center;
+    margin-left: 250px;
+  }
   body {
       background-color: #75889c;
   }
