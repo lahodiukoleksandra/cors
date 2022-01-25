@@ -3,10 +3,20 @@ function showInfo() {
         const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/aleksandra/Downloads/logoRZEZ.png\" text-align=\'center\' width=\'500px\' height=\'500px\'>';
 };
 
-function showCity1() {
-  const pic = document.getElementById('pic');
-  pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoDrezden.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>';
-  pic.style.display = 'initial';
+function showCity1(a) {
+    if (a == 1) {
+    const pic = document.getElementById('pic');
+    pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoDrezden.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>';
+    pic.style.display = 'initial';
+    } else if (a == 2) {
+        const pic = document.getElementById('pic');
+        pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoSchkeudiz.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>';
+        pic.style.display = 'initial';
+    } else if (a == 3){
+        const pic = document.getElementById('pic');
+        pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoLiepzig.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>'; //Show city2
+        pic.style.display = 'initial';
+    }
 };
 
   function showCity2() {
