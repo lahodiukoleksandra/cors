@@ -3,7 +3,7 @@
   }
   .border {
       text-align: center;
-      margin-left: 200px;
+      margin-left: 0px;
   }
   p {
     text-align: center;
@@ -25,7 +25,7 @@
     border-color: #849dbd;
     text-align: center;
     background-color: #B0C4DE ;
-    width: 950px;
+    width: 1000px;
     height: 90px;
     margin-left: 235px;
     margin-right: 500px;
