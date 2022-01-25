@@ -14,8 +14,8 @@ function showCity1(a) {
         pic.style.display = 'initial';
     } else if (a == 3){
         const pic = document.getElementById('pic');
-        pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoLiepzig.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>'; //Show city2
-        pic.style.display = 'initial';
+    pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoLiepzig.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>'; //Show city2
+    pic.style.display = 'initial';
     }
 };
 
