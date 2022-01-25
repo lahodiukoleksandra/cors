@@ -21,10 +21,18 @@ function showCity3() {
   // const text = document.getElementById('text').innerText = "Leipzig is the most populous city in the German state of Saxony. With a population of 605,407 inhabitants as of million residents in the larger urban zone, it surpasses the Saxon capital of Dresden, and is Germany's eighth most populous city as well as the second most populous city in the area of former East Germany after (East) Berlin. "
 
 } 
-function showPic() {
-  // const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/a21/Downloads/photo5427104148647688057.jpg\" text-align=\'center\' width=\'400px\' height=\'500px\'>'; //Show city3
-  // const text = document.getElementById('text').innerText = "The first week at Germany"
+function showPic(a) {
+if (a == 1) {
+  const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/aleksandra/Downloads/week1.jpeg\" text-align=\'center\' width=\'400px\' height=\'500px\'>'; //Show city3
+  const text = document.getElementById('text').innerText = "The first week at Germany"
+  pic.style.display = 'initial';
 }
+else if (a == 2) {
+    const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/aleksandra/Downloads/week2.png\" text-align=\'center\' width=\'900px\' height=\'500px\'>'; //Show city3
+    const text = document.getElementById('text').innerText = "Second week of practice. Work in Filius"
+    pic.style.display = 'initial';
+}
+};
 var slideIndex = 1;
 showSlides(slideIndex);
 

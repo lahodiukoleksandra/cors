@@ -15,10 +15,10 @@
     <div class="dropdown">
     <button class="dropbtn">Practice</button>
       <div class="dropdown-content">
-        <button class="mySlides fade" id="week1" color="#7b38d8" onclick="showPic()">Week 1</button>
-        <button id="week2" color="#7b38d8" onclick="notAllowed()">Week 2</button>
-        <button id="week3" color="#7b38d8" onclick="notAllowed()">Week 3</button>
-        <button id="week4" color="#7b38d8" onclick="notAllowed()">Week 4</button>
+        <button class="mySlides fade" id="week1" color="#7b38d8" onclick="showPic(1)">Week 1</button>
+        <button id="week2" color="#7b38d8" onclick="showPic(2)">Week 2</button>
+        <button id="week3" color="#7b38d8" onclick="showPic()">Week 3</button>
+        <button id="week4" color="#7b38d8" onclick="showPic()">Week 4</button>
       </div>
     </div>
     <div class="dropdown">
@@ -58,7 +58,7 @@
     </div>
       <div class="mySlides" id="pic"></div>
       <div class="mySlides" id="pic2"></div>
-      <div style="width:800px; height:200px;" id="text"></div>
+      <div style="width:800px; height:200px; margin-left: 80px" id="text"></div>
       <div style="width:800px; height:200px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" id="text"></div>
     </div>
 </div>
@@ -68,7 +68,6 @@
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
-
 <script src="/Users/aleksandra/slider1.js"></script>
 </body>
 </html>
