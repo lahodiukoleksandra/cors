@@ -18,19 +18,6 @@ function showCity1(a) {
     pic.style.display = 'initial';
     }
 };
-
-  function showCity2() {
-  const pic = document.getElementById('pic');
-  pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoSchkeudiz.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>';
-  pic.style.display = 'initial';
-}; 
-function showCity3() {
-  const pic = document.getElementById('pic');
-  pic.innerHTML = '<img src=\"/Users/aleksandra/Downloads/photoLiepzig.jpeg\" text-align=\'center\' width=\'500px\' height=\'500px\'>'; //Show city2
-  pic.style.display = 'initial';
-  // const text = document.getElementById('text').innerText = "Leipzig is the most populous city in the German state of Saxony. With a population of 605,407 inhabitants as of million residents in the larger urban zone, it surpasses the Saxon capital of Dresden, and is Germany's eighth most populous city as well as the second most populous city in the area of former East Germany after (East) Berlin. "
-
-} 
 function showPic(a) {
 if (a == 1) {
   const picture = document.getElementById('pic').innerHTML = '<img src=\"/Users/aleksandra/Downloads/week1.jpeg\" text-align=\'center\' width=\'400px\' height=\'500px\'>'; //Show city3
