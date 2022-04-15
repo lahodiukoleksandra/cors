@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 from blog.models import Posts
+from blog.api.serializers import PostSerializer
 
 
 def post_to_dict(post):
@@ -23,12 +24,12 @@ def post_to_dict(post):
 @csrf_exempt
 def post_list(request):
     if request.method == "GET":
-        posts = Posts.objects.all()
-        posts_as_dict = [post_to_dict(p) for p in posts]
-        return JsonResponse({"data": posts_as_dict})
+        posts = Post.objects.all()
+        return JsonResponse({"data": PostSerializer(posts, many=True).data})
     elif request.method == "POST":
-        post_data = json.loads(request.body)
-        post = Posts.objects.create(**post_data)
+        serializer = PostSerializer(data=post_data)
+        serializer.is_valid(raise_exception=True)
+        post = serializer.save()
         return HttpResponse(
             status=HTTPStatus.CREATED,
             headers={"Location": reverse("api_post_detail",
@@ -42,7 +43,7 @@ def post_list(request):
 def post_detail(request, pk):
     post = get_object_or_404(Posts, pk=pk)
     if request.method == "GET":
-        return JsonResponse(post_to_dict(post))
+        return JsonResponse(PostSerializer(post).data)
     elif request.method == "PUT":
         post_data = json.loads(request.body)
         for field, value in post_data.items():
@@ -52,4 +53,8 @@ def post_detail(request, pk):
     elif request.method == "DELETE":
         post.delete()
         return HttpResponse(status=HTTPStatus.NO_CONTENT)
-    return HttpResponseNotAllowed(["GET", "PUT", "DELETE"])
+    elif request.method == 'POST':
+        serializer = PostSerializer(post, data=post_data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+    return HttpResponseNotAllowed(["GET", "PUT", "DELETE", "POST"])
